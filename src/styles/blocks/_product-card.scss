@@ -71,6 +71,7 @@
     border: 1px solid $light-blue-color;
     border-radius: 5px;
     line-height: 38px;
+    transition: color, background-color 400ms;
 
     &:hover {
       color: $light-blue-color;
