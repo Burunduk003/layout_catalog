@@ -19,9 +19,19 @@
   }
 
   &__product-img {
-    max-width: 160px;
-    min-height: 134px;
+    width: 160px;
+    height: 134px;
+    align-self: center;
     margin: 15px 5px 45px;
+    transition: transform 400ms;
+
+    &:hover {
+      transform: scale(1.2);
+      border: 3px solid #f3f3f3;
+      box-sizing: initial;
+      margin: 0 5px 30px;
+      padding: 12px 0;
+    }
   }
   
   &__vendor-code {
