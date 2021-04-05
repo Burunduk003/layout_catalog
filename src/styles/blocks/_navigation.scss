@@ -15,6 +15,21 @@
     &:hover {
       color: $light-blue-color;
     }
+
+    &--active {
+      color: $light-blue-color;
+    
+      &:after {
+        content: "";
+        position: absolute;
+        background: $light-blue-color;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 4px;
+        border-radius: 8px;
+      }
+    }
   }
 
   &__list {
@@ -35,21 +50,5 @@
     &:last-child {
       margin-right: 0;
     }
-  }
-  
-}
-
-.is-active {
-  color: $light-blue-color;
-
-  &:after {
-    content: "";
-    position: absolute;
-    background: $light-blue-color;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 4px;
-    border-radius: 8px;
   }
 }

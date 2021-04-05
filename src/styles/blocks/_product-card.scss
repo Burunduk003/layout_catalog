@@ -9,7 +9,7 @@
   &__price {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     margin-bottom: 20px;
   }
   
@@ -19,20 +19,22 @@
   }
 
   &__product-img {
+    align-self: center;
+
     width: 160px;
     height: 134px;
-    align-self: center;
     margin-top: 15px;
     margin-bottom: 45px;
     transition: transform 400ms;
 
     &:hover {
-      transform: scale(1.2);
-      border: 3px solid #f3f3f3;
       box-sizing: initial;
+      padding: 12px 0;
       margin-top: 0;
       margin-bottom: 30px;
-      padding: 12px 0;
+      border: 3px solid #f3f3f3;
+
+      transform: scale(1.2);
     }
   }
   
@@ -41,9 +43,10 @@
   }
   
   &__product-name {
+    margin-bottom: 6px;
+
     font-size: 12px;
     font-weight: 500;
-    margin-bottom: 6px;
     line-height: 15px;
   }
 
@@ -57,20 +60,24 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     margin-bottom: 20px;
   }
 
   &__buy-button {
+    border: 1px solid $light-blue-color;
+    border-radius: 5px;
+
     font-size: 14px;
     text-transform: uppercase;
     text-decoration: none;
     font-weight: 700;
+    line-height: 38px;
+
     color: $white-color;
     background-color: $light-blue-color;
     text-align: center;
-    border: 1px solid $light-blue-color;
-    border-radius: 5px;
-    line-height: 38px;
+
     transition: color, background-color 400ms;
 
     &:hover {
