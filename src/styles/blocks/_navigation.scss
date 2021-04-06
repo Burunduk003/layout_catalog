@@ -1,4 +1,5 @@
 .nav {
+  justify-self: end;
   text-align: center;
   font-weight: 500;
 
@@ -33,7 +34,9 @@
   }
 
   &__list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(8, min-content);
+    gap: 20px;
     justify-content: center;
     margin: 0;
     padding: 0;
@@ -41,8 +44,7 @@
   }
 
   &__item {
-    margin: 0 10px;
-
+    
     &:first-child {
       margin-left: 0;
     }

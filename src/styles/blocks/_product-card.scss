@@ -1,39 +1,30 @@
 .product-card {
-  display: flex;
-  flex-direction: column;
   max-width: $card-width;
   padding: 14px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
 
   &__price {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     align-items: baseline;
     margin-bottom: 20px;
   }
   
   &__current-price {
+    text-align: end;
     font-size: 16px;
     font-weight: 700;
   }
 
   &__product-img {
-    align-self: center;
-
     width: 160px;
     height: 134px;
-    margin-top: 15px;
-    margin-bottom: 45px;
+    margin: 15px 5px 41px;
+    
     transition: transform 400ms;
 
     &:hover {
-      box-sizing: initial;
-      padding: 12px 0;
-      margin-top: 0;
-      margin-bottom: 30px;
-      border: 3px solid #f3f3f3;
-
       transform: scale(1.2);
     }
   }
@@ -57,14 +48,19 @@
   }
 
   &__rating {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    justify-content: space-between;
 
     margin-bottom: 20px;
   }
 
+  &__review {
+    text-align: end;
+  }
+
   &__buy-button {
+    display: block;
     border: 1px solid $light-blue-color;
     border-radius: 5px;
 
