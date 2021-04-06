@@ -1,27 +1,32 @@
 .product-card {
-  display: flex;
-  flex-direction: column;
   max-width: $card-width;
   padding: 14px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
 
   &__price {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: baseline;
     margin-bottom: 20px;
   }
   
   &__current-price {
+    text-align: end;
     font-size: 16px;
     font-weight: 700;
   }
 
   &__product-img {
-    max-width: 160px;
-    min-height: 134px;
-    margin: 15px 5px 45px;
+    width: 160px;
+    height: 134px;
+    margin: 15px 5px 41px;
+    
+    transition: transform 400ms;
+
+    &:hover {
+      transform: scale(1.2);
+    }
   }
   
   &__vendor-code {
@@ -29,9 +34,10 @@
   }
   
   &__product-name {
+    margin-bottom: 6px;
+
     font-size: 12px;
     font-weight: 500;
-    margin-bottom: 6px;
     line-height: 15px;
   }
 
@@ -42,23 +48,33 @@
   }
 
   &__rating {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    justify-content: space-between;
+
     margin-bottom: 20px;
   }
 
+  &__review {
+    text-align: end;
+  }
+
   &__buy-button {
+    display: block;
+    border: 1px solid $light-blue-color;
+    border-radius: 5px;
+
     font-size: 14px;
     text-transform: uppercase;
     text-decoration: none;
     font-weight: 700;
+    line-height: 38px;
+
     color: $white-color;
     background-color: $light-blue-color;
     text-align: center;
-    border: 1px solid $light-blue-color;
-    border-radius: 5px;
-    line-height: 38px;
+
+    transition: color, background-color 400ms;
 
     &:hover {
       color: $light-blue-color;

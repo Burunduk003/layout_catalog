@@ -1,16 +1,14 @@
 .catalog-page {
-  display: flex;
+  padding: 0 40px 78px;
+  display: grid;
+  grid-template-columns: repeat(4, $card-width);
   justify-content: center;
+  row-gap: $card-gap-row;
+  column-gap: $card-gap-column;
 
-  &__wrapper {
-    width: $wrapper-width;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
-
-  &__product-card {
-    margin: 0 $margin-between-cards 50px;
+  @media (max-width: $card-width*4 + $card-gap-column*3 + 80px) {
+    & {
+      grid-template-columns: repeat(auto-fill, $card-width);
+    }
   }
 }

@@ -1,6 +1,6 @@
 .stars {
-  height: 15px;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
 
   &__star {
     background-image: url(../images/star.svg);
